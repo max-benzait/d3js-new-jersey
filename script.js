@@ -40,10 +40,11 @@ function initThree() {
 	initCamera();
 	initLights();
 
-	controls = new THREE.TrackballControls(camera, renderer.domElement);
+	controls = new THREE.OrbitControls(camera, renderer.domElement);
+	//controls = new THREE.TrackballControls(camera, renderer.domElement);
 	controls.minDistance = 10;
 	controls.maxDistance = 50;
-	controls.staticMoving = true;
+	//controls.staticMoving = true;
 	//controls.noRotate = true;
 	//controls.noPan = true;
 	const quaternion = new THREE.Quaternion();
