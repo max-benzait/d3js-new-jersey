@@ -372,10 +372,10 @@ var YearButtons = React.createClass({
 				'active': year == self.state.currentYear
 			});
 
-			return <a className={classes} key={year} href={'#/an/' + year}>{year}</a>;
+			return "<a className={" + classes + "} key={" + year + "} href={'#/an/' + " + year + "}>{" + year + "}</a>";
 		}
 
-		return <div id="current-year" className="btn-group" role="group">{self.props.years.map(createButton)}</div>;
+		return "<div id=" + current-year + " className='btn-group' role='group'>" + self.props.years.map(createButton) + "</div>";
 	}
 });
 
@@ -391,7 +391,7 @@ loadData(dataSources, function(results) {
 	var features = topojson.feature(judete, judete.objects['romania-counties-geojson']).features;
 	initGeometry(features);
 
-	React.render(<YearButtons years={years} />, document.getElementById('container'));
+	//React.render(<YearButtons years={years} />, document.getElementById('container'));
 });
 
 document.addEventListener('mousemove', onDocumentMouseMove);
